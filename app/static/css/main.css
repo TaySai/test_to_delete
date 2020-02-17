@@ -1,0 +1,26 @@
+header {
+    max-width: 1440px;
+    margin: 50px auto;
+}
+header nav {
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+}
+a {
+    text-decoration: none;
+}
+header nav a:first-of-type {
+    width: 50%;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+.fetch-data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/galaxies">Galaxies</a>
+            <a href="/messiers">Messiers</a>
+        </nav>
+    </header>
+    <main>
+        <h1>The universe is big, let's make it small by sharing our codes</h1>
+        <h2>{{ title }}</h2>
+        <section class="fetch-data">
+            {% for item in res|batch(10) %}
+                <ul>
+                    {% for x in item %}
+                        <li><a href="/{{ title }}/{{ x }}">{{ x }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </section>
+
+    </main>
+</body>
+</html>
