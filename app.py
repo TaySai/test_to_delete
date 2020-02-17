@@ -1,10 +1,9 @@
-from app import app
-import app.fetch_data.web as wb
-import app.fetch_data.batch as btch
-from flask import render_template
-from flask import request
+import fetch_data.web as wb
+import fetch_data.batch as btch
+from flask import Flask, request, render_template
 from flask import jsonify
 
+app = Flask(__name__)
 
 @app.route('/')
 @app.route('/index')
@@ -56,7 +55,7 @@ def web_messiers():
 # Return web page
 @app.route("/galaxies/<galaxy>", methods=['GET'])
 def web_galaxy(galaxy):
-    return "Dev in progress..."
+    return "Development in progress..."
 
 # Return web page
 @app.route("/messiers/<messier>", methods=['GET'])

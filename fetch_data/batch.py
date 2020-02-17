@@ -1,6 +1,6 @@
 import sqlalchemy as db
 
-import app.fetch_data as fd
+import fetch_data as fd
 
 def get_data(data):
     engine = create_session()

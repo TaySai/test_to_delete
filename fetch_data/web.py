@@ -1,5 +1,5 @@
 import sqlalchemy as db
-import app.fetch_data as fd
+import fetch_data as fd
 
 def get_data(galaxy, messier):
     engine = fd.create_session()

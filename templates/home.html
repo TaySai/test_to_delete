@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Title</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/galaxies">Galaxies</a>
+            <a href="/messiers">Messiers</a>
+        </nav>
+    </header>
+    <main>
+        <h1>The universe is big, let's make it small by sharing our ideas</h1>
+
+
+        <p>3 ways to get data</p>
+        <ul>
+            <li>Just by navigating in the website</li>
+            <li>By arguments in url, return JSON
+               "example /api/v1/web?messier=example1 <br>" \
+               "example /api/v1/web?galaxy=example2 <br>" \
+               "example /api/v1/web?messier=example1&galaxy=example2"
+            </li>
+            <li>
+                By batch with json application, return JSON can be parsed as list
+                <pre>
+import requests as rq
+data = [{'some': 'data'}, {'messier_name':'m31'}, {'galaxy_name':'and'}]
+r = rq.get('http://127.0.0.1:5000/api/v1/batch/', json=data, headers={
+    'Content-Type':'application/json',
+})
+                </pre>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
