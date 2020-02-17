@@ -7,4 +7,4 @@ def sql_to_json(obj, keys):
 
 
 def create_session():
-    return create_engine('sqlite:////home/taysai/app/db/data.sqlite', echo=False)
+    return create_engine('sqlite:////path/db/data.sqlite', echo=False)
